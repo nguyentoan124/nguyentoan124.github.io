@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* list-style: none; */
+}
+
+/* .content, */
+.header{
+
+    box-shadow: 0 2px 3px -2px gray;
+    /* padding-top: 10px; */
+    
+}
+
+.header .nav>li{
+    cursor: pointer;
+    /* display: inline; */
+    /* transition: 0.2s all; */
+    /* transition: 0.3s all; */
+}
+
+.header .nav>li:hover{
+    border-bottom: 4px solid rgb(147 197 253);
+}
+
+.header .nav .sub-nav{
+    display: none;
+    width: 1024px;
+    height: 250px;
+    box-shadow: 5px 5px 10px gray;
+    background-color: white;
+    /* transition: 0.3s all; */
+}
+
+.header .nav li:hover .sub-nav{
+    display: block;
+}
+
+.header .nav .sub-nav .sub-nav_content .inf{
+    background-color: white;
+    height: 250px;
+    padding-left: 15px;
+}
+
+.header .nav .sub-nav .sub-nav_content .inf,
+.header .nav .sub-nav .sub-nav_content .inf img{
+    width: 150px;
+}
+
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+.search{
+    display: none; 
+    animation: fadeIn linear 0.3s;
+}
+
+#check_input:checked ~ .search,
+#check_input:checked ~ .overlay{
+    display: block;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
